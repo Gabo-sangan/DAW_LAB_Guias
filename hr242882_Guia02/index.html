@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+</head>
+<body>
+    
+</body>
+<script>
+    var num1 = 0;
+    var num2 = 0;
+    var opcion = 0;
+    var total = 0;
+    var continuar = true;
+    num1 = parseInt(prompt('Ingrese el primer valor numerico'));
+    num2 = parseInt(prompt('Ingrese el segundo valor numerico'));
+
+    opcion = parseInt(prompt('Ingrese el numero de la operación matematica \n 1-sumar \n 2-restar \n 3-multiplicar \n 4-dividir'));
+
+    if(opcion == 1){
+        total = num1 + num2;
+    }else if (opcion == 2){
+        total = num1 - num2;
+    }else if (opcion == 3){
+        total = num1 * num2;
+    }else if (opcion == 4){
+        if(num2 != 0){
+            total = num1 / num2;
+        }else{
+            alert("No se puede dividir entre 0");
+            continuar = false ;
+        }
+    }else{
+        alert("No se escogio ninguna opcion");
+        continuar = false;
+    }
+
+    if(continuar){
+        alert("El resultado de la opereación es : " + total)
+    }
+</script>
+</html>
